@@ -1,30 +1,30 @@
-#  ESP32 Dice Game with LED Matrix
+# ESP32 Dice Game with LED Matrix
 
-This is an interactive dice game built using an **ESP32 microcontroller**, an **8x32 LED matrix display**, and a **joystick push button**. The game simulates rolling two dice with animated transitions and displays the result on the matrix.
-
----
-
-##  Features
-
--  Rolls two dice and displays their faces
--  Single-button input to roll the dice
--  Uses `MD_MAX72XX` and `MD_Parola` libraries for matrix animation
--  Smooth dice rolling animation
--  Idle message scrolls when no input is detected
+This is an interactive dice game built using an ESP32 microcontroller, an 8x32 LED matrix display, and a push button. The game simulates rolling two dice with animated transitions and displays the result on the matrix.
 
 ---
 
-##  Hardware Used
+## Features
+
+- Rolls two dice and displays their faces
+- Single push button to trigger dice roll
+- Uses `MD_MAX72XX` and `MD_Parola` libraries for matrix control and animations
+- Smooth rolling animation before displaying the result
+- Idle messages scroll when no input is detected
+
+---
+
+## Hardware Used
 
 | Component          | Description                   |
 |--------------------|-------------------------------|
 | ESP32 Board        | Microcontroller               |
 | 8x32 LED Matrix    | 4x MAX7219 modules            |
-| Push Button        | Joystick-style, digital input |
-| (Optional) Buzzer  | Sound feedback on roll        |
+| Push Button        | Digital input (GPIO 14)       |
+| (Optional) Buzzer  | Sound feedback (future scope) |
 | Jumper Wires       | For connections               |
 
-**Pin Configuration:**
+### Pin Configuration
 
 | Module     | ESP32 Pin |
 |------------|-----------|
@@ -35,48 +35,59 @@ This is an interactive dice game built using an **ESP32 microcontroller**, an **
 
 ---
 
-##  Circuit Diagram
+## Circuit Diagram
 
 [Circuit Diagram](esp32_dice_circuit.png)
 
-##  How to Use
+---
 
-1. Upload the code to your ESP32 using Arduino IDE.
-2. Power the device — a message will scroll on the matrix.
-3. Press the button to roll the dice.
-4. Two dice faces appear after a quick animation.
-5. Wait for 3 seconds → Prompt will reappear.
+## Live Simulation
+
+You can view and test this project online in your browser using Wokwi:
+
+[ESP32 Dice Game Simulation on Wokwi](https://wokwi.com/projects/435618335373574145)
+
+This simulation shows the LED matrix animation and button interaction as intended.
 
 ---
 
-##  Libraries Required
+## How to Use
+
+1. Upload the code to your ESP32 using the Arduino IDE.
+2. Power the board. The display will prompt: "Press Button To Roll".
+3. Press the button to roll the dice.
+4. Two random dice faces appear after an animation.
+5. After a short delay, the game resets and is ready for the next roll.
+
+---
+
+## Libraries Required
 
 Install via Arduino Library Manager:
 
 - `MD_MAX72XX`
 - `MD_Parola`
-- `SPI`
+- `SPI` (comes with Arduino)
 
 ---
 
-##  Future Improvements
+## Future Improvements
 
-- Add score tracking
-- Add game-over conditions or prediction logic
-- Include buzzer sound feedback
-- Extend to multiplayer version
+- Add scoring system
+- Add buzzer sound feedback
+- Add prediction modes and game-over logic
+- Add multiplayer support
 
 ---
 
-##  License
+## License
 
 This project is licensed under the [MIT License](LICENSE).  
-Feel free to use, modify, and share — just give credit.
+You are free to use, modify, and share this project with attribution.
 
 ---
 
-## 🙌 Author
+## Author
 
-Made with ❤️ by gouravkrjha  
-Feel free to fork, star, and improve this project!
-
+Created by [@gouravkrjha](https://github.com/gouravkjha)  
+Feel free to fork, star, or contribute to the project.
