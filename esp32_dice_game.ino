@@ -23,7 +23,7 @@ const byte diceFaces[6][8] = {
   { B11000011, B11000011, B00000000, B11000011, B11000011, B00000000, B11000011, B11000011 }  // 6
 };
 
-int state = 0;  // ✅ Global variable to track animation state
+int state = 0;  //   Global variable to track animation state
 
 void setup() {
   Serial.begin(115200);
@@ -38,7 +38,7 @@ void setup() {
 }
 
 void loop() {
-  p.displayAnimate();  // ✅ Must be called every time to keep scrolling
+  p.displayAnimate();  //   Must be called every time to keep scrolling
 
   // If button is pressed → roll dice
   if (digitalRead(BUTTON) == LOW) {
