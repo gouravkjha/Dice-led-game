@@ -27,7 +27,7 @@ int state = 0;  //   Global variable to track animation state
 
 void setup() {
   Serial.begin(115200);
-  randomSeed(analogRead(15));  // for random dice
+  randomSeed(analogRead(36));  // for random dice
 
   p.begin();
   p.setIntensity(7);
